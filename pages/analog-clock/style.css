@@ -122,8 +122,8 @@
   background: rgba(0,0,0,0.8);
 }
 
-.modal .content {
-  background-color: #D3D3D3;
+.modal a {
+  text-decoration: none;
   margin: 50% auto;
   padding: 20px;
   border-radius: 5px;
@@ -146,7 +146,7 @@
   border: none;
   border-radius: 18px;
   color: #fff;
-  background: #086b8bd5;
+  background: #0095F6;
   box-shadow: 2px 2px #0000009f;
   cursor: pointer;
 
@@ -154,8 +154,8 @@
 }
 
 .btn:hover {
-  border: 1px solid #086b8bd5;
-  color: #086b8bd5;
+  border: 1px solid #0095F6;
+  color: #0095F6;
   background: #fff;
   box-shadow: 5px 5px #0000009f;
 }
