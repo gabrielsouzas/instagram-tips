@@ -1,0 +1,161 @@
+* {
+    font-family: "Roboto";
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282828;
+  }
+  
+  .clock {
+    width: 200px;
+    height: 200px;
+    margin: 8px;
+    padding: 1.5rem;
+    border: 6px solid #282828;
+    border-radius: 50%;
+    box-shadow: -8px -8px 12px rgba(67, 67, 67, 0.4),
+      inset 8px 8px 12px rgba(0, 0, 0, 0.3),
+      inset -8px -8px 12px rgba(67, 67, 67, 0.4), 8px 8px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .outer-clock {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #282828;
+  }
+  
+  .outer-clock::before,
+  .outer-clock::after,
+  .outer-clock .marking {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #bdbdcb;
+    z-index: 0;
+    left: 49%;
+  }
+  
+  .outer-clock::after {
+    transform: rotate(90deg);
+  }
+  
+  .outer-clock .marking {
+    width: 2px;
+  }
+  
+  .outer-clock .marking.marking-one {
+    transform: rotate(30deg);
+  }
+  
+  .outer-clock .marking.marking-two {
+    transform: rotate(60deg);
+  }
+  
+  .outer-clock .marking.marking-three {
+    transform: rotate(120deg);
+  }
+  
+  .outer-clock .marking.marking-four {
+    transform: rotate(150deg);
+  }
+  
+  .outer-clock .marking-seconds {
+    background-color: transparent;
+    z-index: 1;
+  }
+  
+  .outer-clock .marking-seconds::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 32px;
+    top: -2px;
+    left: -2px;
+    background-color: #3bd9d9;
+  }
+  
+  .inner-clock {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: #282828;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .inner-clock .clock-time {
+    position: absolute;
+    top: 32%;
+    left: 9.5%;
+    width: 80%;
+    color: #ffffff;
+    font-size: 32pt;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  /* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal .content {
+  background-color: #D3D3D3;
+  margin: 50% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal button {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-size: 26px;
+  font-weight: 700;
+  padding: 9px 40px;
+  border: none;
+  border-radius: 18px;
+  color: #fff;
+  background: #086b8bd5;
+  box-shadow: 2px 2px #0000009f;
+  cursor: pointer;
+
+  transition: ease all 0.35s;
+}
+
+.btn:hover {
+  border: 1px solid #086b8bd5;
+  color: #086b8bd5;
+  background: #fff;
+  box-shadow: 5px 5px #0000009f;
+}
